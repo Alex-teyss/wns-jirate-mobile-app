@@ -1,0 +1,61 @@
+Arguments: 
+  /Users/maximeqnl/.nvm/versions/node/v12.22.9/bin/node /Users/maximeqnl/.nvm/versions/node/v12.22.9/bin/yarn
+
+PATH: 
+  /Users/maximeqnl/.nvm/versions/node/v12.22.9/bin:/Users/maximeqnl/.rbenv/shims:/opt/homebrew/sbin:/opt/homebrew/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Library/Apple/usr/bin:/Users/maximeqnl/wilder/Projects/wns-jirate-mobile-app/development/flutter/bin
+
+Yarn version: 
+  1.22.17
+
+Node version: 
+  12.22.9
+
+Platform: 
+  darwin x64
+
+Trace: 
+  SyntaxError: /Users/maximeqnl/wilder/Projects/wns-jirate-mobile-app/package.json: Unexpected token < in JSON at position 525
+      at JSON.parse (<anonymous>)
+      at /Users/maximeqnl/.nvm/versions/node/v12.22.9/lib/node_modules/yarn/lib/cli.js:1625:59
+      at Generator.next (<anonymous>)
+      at step (/Users/maximeqnl/.nvm/versions/node/v12.22.9/lib/node_modules/yarn/lib/cli.js:310:30)
+      at /Users/maximeqnl/.nvm/versions/node/v12.22.9/lib/node_modules/yarn/lib/cli.js:321:13
+
+npm manifest: 
+  {
+    "name": "wns-jirate-mobile",
+    "version": "1.0.0",
+    "main": "node_modules/expo/AppEntry.js",
+    "scripts": {
+      "start": "expo start",
+      "android": "expo start --android",
+      "ios": "expo start --ios",
+      "web": "expo start --web",
+      "eject": "expo eject"
+    },
+    "dependencies": {
+      "@expo/vector-icons": "^12.0.0",
+      "@react-native-async-storage/async-storage": "^1.16.1",
+      "expo": "~44.0.0",
+      "expo-status-bar": "~1.2.0",
+      "react": "17.0.1",
+      "react-dom": "17.0.1",
+      "react-native": "0.64.3",
+  <<<<<<< HEAD
+      "react-native-snap-carousel": "^3.9.1",
+  =======
+      "react-native-svg": "^12.1.1",
+  >>>>>>> origin/dev
+      "react-native-web": "0.17.1"
+    },
+    "devDependencies": {
+      "@babel/core": "^7.12.9"
+    },
+    "private": true
+  }
+
+yarn manifest: 
+  No manifest
+
+Lockfile: 
+  No lockfile

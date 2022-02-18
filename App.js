@@ -1,23 +1,63 @@
+import React, { useState, useEffect } from "react";
 import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import { StyleSheet, View, ActivityIndicator } from "react-native";
 
-import User from './screens/User';
+import Onboarding from "./screens/Onboarding";
+import HomeScreen from "./screens/HomeScreen";
+import AsyncStorage from "@react-native-async-storage/async-storage";
 
-export default function App() {
+const Loading = () => {
+  return (
+    <View>
+      <ActivityIndicator size="large" />
+    </View>
+  );
+};
+
+const App = () => {
+  const [loading, setLoading] = useState(true);
+  const [viewedOnBoarding, setViewedOnBoarding] = useState(false);
+
+  const checkOnboarding = async () => {
+    try {
+      const value = await AsyncStorage.getItem("@viewedOnboarding");
+
+      if (value !== null) {
+        setViewedOnBoarding(true);
+      }
+    } catch (err) {
+      console.log("Error @checkOnBoarding", err);
+    } finally {
+      setLoading(false);
+    }
+  };
+
+  useEffect(() => {
+    checkOnboarding();
+  }, []);
+
   return (
     <View style={styles.container}>
-      <User />
+      {loading ? (
+        <Loading />
+      ) : viewedOnBoarding ? (
+        <HomeScreen />
+      ) : (
+        <Onboarding />
+      )}
+
       <StatusBar style="auto" />
     </View>
   );
-}
+};
 
 const styles = StyleSheet.create({
   container: {
-    flex: 0.80,
-    padding: 20,
-    backgroundColor: '#fff',
-    alignItems: 'flex-start',
-    justifyContent: 'center',
+    flex: 1,
+    backgroundColor: "#fff",
+    alignItems: "center",
+    justifyContent: "center",
   },
 });
+
+export default App;

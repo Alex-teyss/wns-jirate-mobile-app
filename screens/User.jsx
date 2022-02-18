@@ -1,10 +1,10 @@
 import { StyleSheet, Text, View } from 'react-native';
 
-import Chart from '../components/Chart';
+import Chart from '../components/Chart/Chart';
 
 export default function User() {
   return (
-    <View style={styles.titleContainer}>
+    <View>
       <Text style={styles.helloName}>Hello John,</Text>
       <Text style={styles.helloText}>Good Morning.</Text>
       <Chart />
@@ -18,11 +18,6 @@ const styles = StyleSheet.create({
     backgroundColor: '#fff',
     alignItems: 'flex-start',
     justifyContent: 'center',
-  },
-  titleContainer: {
-    flex: 0.75,
-    justifyContent: 'flex-start',
-    alignContent: 'flex-start',
   },
   helloName: {
     fontSize: 30,
