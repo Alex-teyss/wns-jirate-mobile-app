@@ -1,8 +1,10 @@
 import React from "react";
-import { View, Text, StyleSheet, TouchableOpacity } from "react-native";
+import { ScrollView, Text, StyleSheet, TouchableOpacity } from "react-native";
 import AsyncStorage from "@react-native-async-storage/async-storage";
 import data from '../data/FakeDataCarousel';
 import CustomSlider from '../components/carousel/CustomSlider';
+
+import User from './User';
 
 const HomeScreen = () => {
   const clearOnBoarding = async () => {
@@ -14,20 +16,19 @@ const HomeScreen = () => {
   };
 
   return (
-    <View style={styles.container}>
-      <CustomSlider data={data} />
+    <ScrollView style={styles.container}>
+      <User />
       <TouchableOpacity onPress={clearOnBoarding}>
         <Text>Clear Onboarding</Text>
       </TouchableOpacity>
-    </View>
+      <CustomSlider data={data} />
+    </ScrollView>
   );
 };
 
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    justifyContent: "center",
-    alignItems: "center",
   },
 });
 
