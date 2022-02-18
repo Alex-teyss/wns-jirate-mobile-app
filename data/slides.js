@@ -1,6 +1,6 @@
 export default [
-    { id: 1, title: "Hello world", description: "TIUHUFUFUIFGUIGI", image: require('../assets/splash.png') },
-    { id: 2, title: "Hello world", description: "TIUHUFUFUIFGUIGI", image: require('../assets/splash.png') },
-    { id: 3, title: "Hello world", description: "TIUHUFUFUIFGUIGI", image: require('../assets/splash.png') },
-    { id: 4, title: "Hello world", description: "TIUHUFUFUIFGUIGI", image: require('../assets/splash.png') }
+    { id: 1, title: "Bienvenue sur l'appli Jiraté", description: "Bienvenue sur l'appli Jiraté Voici l'application mobile Jiraté qui permet d'accéder en temps réel à vos projets, vos statistiques et de rester en contact avec vos collaborateurs !", image: require('../assets/onBoarding/step1.png') },
+    { id: 2, title: "Pour quoi faire ?", description: "En connectant votre application mobile à votre compte Jiraté, vous aurez accès un résumé de vos projets : sprint, tickets, statistiques et même des notifications.", image: require('../assets/onBoarding/step2.png') },
+    { id: 3, title: "Toujours garder le contact", description: "Restez en contact : que vous soyez chef de projet, développeur ou autre, vous aurez accès à l'avancée globale et en détail du projet, et vous pourrez même intéragir avec les autres !", image: require('../assets/onBoarding/step3.png') },
+    { id: 4, title: "Vous avez fait le bon choix !", description: "L'application Jiraté est l'outil indispensable pour le suivi de vos projets Jiraté, et pas besoin d'être au bureau !", image: require('../assets/onBoarding/step4.png') }
 ]
