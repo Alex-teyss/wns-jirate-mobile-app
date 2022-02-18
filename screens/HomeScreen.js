@@ -1,6 +1,8 @@
 import React from "react";
 import { View, Text, StyleSheet, TouchableOpacity } from "react-native";
 import AsyncStorage from "@react-native-async-storage/async-storage";
+import data from '../data/FakeDataCarousel';
+import CustomSlider from '../components/carousel/CustomSlider';
 
 const HomeScreen = () => {
   const clearOnBoarding = async () => {
@@ -13,7 +15,7 @@ const HomeScreen = () => {
 
   return (
     <View style={styles.container}>
-      <Text>HomeScreen</Text>
+      <CustomSlider data={data} />
       <TouchableOpacity onPress={clearOnBoarding}>
         <Text>Clear Onboarding</Text>
       </TouchableOpacity>
