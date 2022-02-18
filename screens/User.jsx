@@ -1,10 +1,13 @@
 import { StyleSheet, Text, View } from 'react-native';
 
+import Chart from '../components/Chart';
+
 export default function User() {
   return (
     <View style={styles.titleContainer}>
       <Text style={styles.helloName}>Hello John,</Text>
       <Text style={styles.helloText}>Good Morning.</Text>
+      <Chart />
     </View>
   );
 }
